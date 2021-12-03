@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing page</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="header">
       <header>
-        <h3 class="text-logo">IvadCode</h3>
+        <img src="./assets/Ivad Code logo.svg" alt="" />
         <nav class="nav=-bar">
-          <ul>
+          <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">blog</a></li>
             <li><a href="#">About</a></li>
@@ -21,83 +22,87 @@
         </nav>
       </header>
     </div>
-    <div class="hero-section">
-      <div class="column1">
-        <h2 class="headings">Hi there, I create websites worth your value.</h2>
-        <p class="description">
-          I create proffessional websites for personal and proffessional brands.
-          boost your online presence by builiding websites that your costumer
-          will enjoy using.
-        </p>
-        <button class="hero-btn btn">Contact</button>
-      </div>
-      <div class="column2">
-        <img src="./assets/Subject.png" />
-        <h4>Ivad Yves HABIMANA</h4>
-        <h3>Web developer</h3>
-        <div class="social-icons">
-          <img src="./assets/github icon.png" />
-          <img src="./assets/linkedin icon.png" />
-          <img src="./assets/twitter icon.png" />
+    <div class="main-content">
+      <div class="hero-section">
+        <div class="column1">
+          <h2 class="headings">
+            Hi there, I create websites worth your value.
+          </h2>
+          <p class="description">
+            I create proffessional websites for personal and proffessional
+            brands. boost your online presence by builiding websites that your
+            costumer will enjoy using.
+          </p>
+          <button class="hero-btn btn">Contact</button>
+        </div>
+        <div class="column2">
+          <img src="./assets/Subject.png" />
+          <h4>Ivad Yves HABIMANA</h4>
+          <h3>Web developer</h3>
+          <div class="social-icons">
+            <img src="./assets/github icon.png" />
+            <img src="./assets/linkedin icon.png" />
+            <img src="./assets/twitter icon.png" />
+          </div>
         </div>
       </div>
-    </div>
-    <h3 class="section-head">technologies and expertise</h3>
-    <div class="tech-section">
-      <div class="tech-icons">
-        <img src="./assets/html icon.svg" />
-        <img src="/assets/css icon.svg" />
-        <img src="./assets/JS Icon.svg" />
+      <h3 class="section-head">technologies and expertise</h3>
+      <div class="tech-section">
+        <div class="tech-icons">
+          <img src="./assets/html icon.svg" />
+          <img src="/assets/css icon.svg" />
+          <img src="./assets/JS Icon.svg" />
+        </div>
+        <div class="tech-experience">
+          <h2 class="headings">over 2 years in web development</h2>
+          <p class="description">
+            For the last two years i have been in the field of web development
+            working with different clients and creating websites and products
+            that change peoples lives for the better
+          </p>
+          <button class="white-btn btn">Download CV</button>
+        </div>
       </div>
-      <div class="tech-experience">
-        <h2 class="headings">over 2 years in web development</h2>
-        <p class="description">
-          For the last two years i have been in the field of web development
-          working with different clients and creating websites and products that
-          change peoples lives for the better
-        </p>
-        <button class="white-btn btn">Download CV</button>
+      <h3 class="section-head">Latest projects</h3>
+      <div class="project">
+        <div class="project-image">
+          <img src="./assets/project images/project 1.png" />
+          <h4>Project 1</h4>
+        </div>
+        <div class="project-image">
+          <img src="./assets/project images/project 2.png" />
+          <h4>Project 2</h4>
+        </div>
+        <div class="project-image">
+          <img src="./assets/project images/project 3.png" />
+          <h4>Project 3</h4>
+        </div>
+        <div class="project-image">
+          <img src="./assets/project images/project 4.png" />
+          <h4>Project 4</h4>
+        </div>
+        <button class="white-btn btn">checkout more projects</button>
       </div>
-    </div>
-    <h3 class="section-head">Latest projects</h3>
-    <div class="project">
-      <div class="project-image">
-        <img src="./assets/project images/project 1.png" />
-        <h4>Project 1</h4>
+      <h3 class="headings">get in touch</h3>
+      <div class="get-in-touch-section">
+        <div class="left-card">
+          <img src="./assets/message icon.png" alt="" />
+          <h4 class="small-headings">contact information</h4>
+        </div>
+        <div class="right-card">
+          <form action="contact">
+            <input type="text" name="name" id="name" placeholder="Full name" />
+            <input type="email" name="email" placeholder="email" />
+            <textarea name="name" id="" placeholder="your message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="project-image">
-        <img src="./assets/project images/project 2.png" />
-        <h4>Project 2</h4>
+      <div class="footer">
+        <footer>
+          <h3 class="text-logo">IvadCode</h3>
+        </footer>
       </div>
-      <div class="project-image">
-        <img src="./assets/project images/project 3.png" />
-        <h4>Project 3</h4>
-      </div>
-      <div class="project-image">
-        <img src="./assets/project images/project 4.png" />
-        <h4>Project 4</h4>
-      </div>
-      <button class="white-btn btn">checkout more projects</button>
-    </div>
-    <h3 class="headings">get in touch</h3>
-    <div class="get-in-touch-section">
-      <div class="left-card">
-        <img src="./assets/message icon.png" alt="" />
-        <h4 class="small-headings">contact information</h4>
-      </div>
-      <div class="right-card">
-        <form action="contact">
-          <input type="text" name="name" id="name" placeholder="Full name" />
-          <input type="email" name="email" placeholder="email" />
-          <textarea name="name" id="" placeholder="your message"></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-    <div class="footer">
-      <footer>
-        <h3 class="text-logo">IvadCode</h3>
-      </footer>
     </div>
   </body>
 </html>
