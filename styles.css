@@ -26,6 +26,7 @@ body {
   justify-content: space-between;
   padding: 15px 0;
   align-items: center;
+  overflow: hidden;
 }
 .nav-links {
   display: flex;
@@ -55,4 +56,18 @@ body {
   border: none;
   color: white;
   background-color: #ff8080;
+}
+.hamburger-icon {
+  display: none;
+}
+
+/* making the nav bar responsive to small screens */
+@media (max-width: 600px) {
+  .hamburger-icon {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    margin-right: 20px;
+  }
 }
