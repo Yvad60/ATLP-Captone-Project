@@ -9,7 +9,7 @@ body {
 }
 
 .main-content {
-  margin: 200px 88px;
+  margin: 100px 88px;
 }
 .header {
   background-color: #fdfcfc;
@@ -36,7 +36,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 .nav-links a {
   text-decoration: none;
@@ -70,4 +70,29 @@ body {
     display: none;
     margin-right: 20px;
   }
+}
+
+/* the hero section styling */
+
+.hero-section {
+  display: flex;
+  align-items: flex-end;
+}
+
+.column1 {
+  flex: 1;
+}
+.headings {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
+.column2 {
+  flex: 1;s
+  justify-content: flex-end;
+}
+
+.subject-image {
+  width: 50%;
 }
