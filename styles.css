@@ -9,7 +9,7 @@ body {
 }
 
 .main-content {
-  margin: 100px 88px;
+  margin: 120px 88px;
 }
 .header {
   background-color: #fdfcfc;
@@ -45,7 +45,7 @@ body {
   color: #505050;
 }
 
-.nav-btn {
+.red-btn {
   width: 105px;
   height: 40px;
   letter-spacing: 2px;
@@ -83,16 +83,48 @@ body {
   flex: 1;
 }
 .headings {
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 45px;
+  line-height: 45px;
   margin-bottom: 20px;
 }
 
 .column2 {
-  flex: 1;s
-  justify-content: flex-end;
+  flex: 1;
 }
 
-.subject-image {
-  width: 50%;
+.subject-image img {
+  width: 70%;
+  margin-left: 150px;
+}
+.sub-image-dec {
+  text-align: center;
+  margin-left: 100px;
+}
+.social-icons img {
+  width: 8%;
+  margin-left: 16px;
+}
+
+.column1 .description {
+  margin-bottom: 16px;
+}
+
+/* tech section */
+
+.section-head {
+  margin: 100px 0px;
+  text-align: center;
+  font-size: 35px;
+}
+.tech-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+.tech-icons {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+.tech-experience {
+  flex: 1;
 }
