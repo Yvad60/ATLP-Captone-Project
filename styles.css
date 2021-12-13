@@ -47,7 +47,7 @@ body {
 .red-btn {
   width: 105px;
   height: 40px;
-  letter-spacing: 2px;
+  letter-spacing: px;
   font-size: 17px;
   font-weight: 500;
   text-align: center;
@@ -113,8 +113,12 @@ body {
 .section-head {
   margin: 100px 0px;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   color: #505050;
+}
+.description {
+  color: #505050;
+  margin: 0.5em 0;
 }
 .tech-section {
   display: flex;
@@ -147,4 +151,55 @@ body {
   border: none;
   box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
   align-self: center;
+}
+
+/* Project section */
+.project-section {
+  display: flex;
+  flex-direction: column;
+}
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project-image img {
+  width: inherit;
+}
+.project-image {
+  display: flex;
+  flex-direction: column;
+  width: 525px;
+  align-items: center;
+}
+.project-section .white-btn {
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+  width: 220px;
+}
+h4 {
+  font-size: 1em;
+  margin: 0.2em 0;
+}
+
+.project-image .red-btn {
+  width: 150px;
+  margin-bottom: 2em;
+  background-color: #fbc1c1;
+}
+
+/* Get in touch section */
+
+.get-in-touch-section {
+  display: flex;
+  background-color: black;
+}
+
+.left-card {
+  flex: 2;
+  background-color: white;
+}
+.right-card {
+  flex: 3;
 }
