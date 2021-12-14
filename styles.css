@@ -193,13 +193,14 @@ h4 {
 
 .get-in-touch-section {
   display: flex;
-  background-color: black;
+  background-color: #505050;
 }
 
 .left-card {
   flex: 2;
-  background-color: white;
+  background-color: #505050;
 }
 .right-card {
   flex: 3;
+  height: 200px;
 }

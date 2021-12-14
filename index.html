@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing page</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -119,10 +120,27 @@
           <h4 class="small-headings">contact information</h4>
         </div>
         <div class="right-card">
-          <form action="contact">
-            <input type="text" name="name" id="name" placeholder="Full name" />
-            <input type="email" name="email" placeholder="email" />
-            <textarea name="name" id="" placeholder="your message"></textarea>
+          <form action="contact" id="contactForm">
+            <label for="name"> Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Habimana Yves"
+            /><br />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="test@test.com"
+            /><br />
+            <label for="message">message</label>
+            <textarea
+              name="name"
+              id="message"
+              placeholder="your message"
+            ></textarea
+            ><br />
             <button type="submit">Submit</button>
           </form>
         </div>
@@ -133,5 +151,13 @@
         </footer>
       </div>
     </div>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"
+    ></script>
   </body>
 </html>
