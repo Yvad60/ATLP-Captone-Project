@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"
+    ></script>
     <title>Landing page</title>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -132,6 +135,7 @@
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="test@test.com"
             /><br />
             <label for="message">message</label>
@@ -153,11 +157,9 @@
     </div>
     <script
       defer
-      src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"
+      src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"
     ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"
-    ></script>
+    <script defer src="./init-firebase.js"></script>
+    <script defer src="./script.js"></script>
   </body>
 </html>
