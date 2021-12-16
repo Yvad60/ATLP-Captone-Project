@@ -11,10 +11,6 @@ function loginUser(e) {
   console.log("hello");
 }
 
-function getInputValue(elementId) {
-  return document.getElementById(elementId).value;
-}
-
 function authUser(email, password) {
   // the sign in function
   firebase
