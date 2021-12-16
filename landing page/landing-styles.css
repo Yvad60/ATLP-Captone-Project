@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #fbc1c1 11%;
+  background-color: #fdf2f2;
 }
 .header {
   background-color: #fdfcfc;
@@ -192,15 +192,9 @@ h4 {
 /* Get in touch section */
 
 .get-in-touch-section {
-  display: flex;
-  background-color: #505050;
-}
-
-.left-card {
-  flex: 2;
-  background-color: #505050;
-}
-.right-card {
-  flex: 3;
-  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2em;
+  background-color: #ffffff;
+  min-width: fit-content;
 }
