@@ -12,7 +12,6 @@ function submitToFirebase(e) {
 
   // save message to firebase
   saveMessage(name, email, message);
-  console.log("Hello");
 }
 
 function getInputValue(elementId) {
