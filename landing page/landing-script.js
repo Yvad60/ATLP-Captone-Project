@@ -6,15 +6,27 @@ function submitToFirebase(e) {
   e.preventDefault();
 
   // storing form value
-  let name = getInputValue("name");
-  let email = getInputValue("email");
-  let message = getInputValue("message");
+  let enteredName = getInputValue("name");
+  let enteredEmail = getInputValue("email");
+  let enteredMessage = getInputValue("message");
 
-  // save message to firebase
-  saveMessage(name, email, message);
-  console.log("Hello");
+  if (isFormDataValid(enteredName, enteredEmail)) {
+    saveMessage(enteredName, enteredEmail, enteredMessage);
+    alert("Message Sent")
+    document.getElementById("contactForm").submit();
+  }
 }
 
-function getInputValue(elementId) {
-  return document.getElementById(elementId).value;
+
+//reference messages collection
+let messagesRef = appDatabase.ref("Messages");
+
+//function to save message
+function saveMessage(name, email, message) {
+  let newMessage = messagesRef.push();
+  newMessage.set({
+    userName: name,
+    userEmail: email,
+    userMessage: message,
+  });
 }

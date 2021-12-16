@@ -10,15 +10,5 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-//reference messages collection
-let messagesRef = firebase.database().ref("Messages");
-
-//function to save message
-function saveMessage(name, email, message) {
-  let newMessage = messagesRef.push();
-  newMessage.set({
-    userName: name,
-    userEmail: email,
-    userMessage: message,
-  });
-}
+// create firebase database
+let appDatabase = firebase.database();

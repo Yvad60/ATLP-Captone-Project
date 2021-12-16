@@ -8,7 +8,6 @@ function loginUser(e) {
 
   // authaunticate user
   authUser(enteredEmail, enteredPassword);
-  console.log("hello");
 }
 
 function authUser(email, password) {
@@ -19,9 +18,13 @@ function authUser(email, password) {
     .then((userCredential) => {
       // if signed in
       let user = userCredential.user;
+      alert("logged in successfully :)");
+      window.location.href = "../dashboard/dashboard.html";
     })
     .catch((error) => {
+      alert("email or password incorrect :(");
       let errorCode = error.code;
       let errorMessage = error.message;
+      console.log(errorMessage)
     });
 }
