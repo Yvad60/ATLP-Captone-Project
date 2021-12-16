@@ -29,3 +29,5 @@ function createNewUser(email, password) {
       console.log(errorMessage);
     });
 }
+
+//preparing merge
