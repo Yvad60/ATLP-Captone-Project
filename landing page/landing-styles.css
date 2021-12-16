@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fdf2f2;
+}
+.header {
+  background-color: #fdfcfc;
+  overflow: auto;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
+}
+.main-content {
+  margin: 110px 88px;
+}
+
+.header header {
+  margin: 0 88px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  align-items: center;
+  overflow: hidden;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 70px;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #505050;
+}
+
+.red-btn {
+  width: 105px;
+  height: 40px;
+  letter-spacing: px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: #ff8080;
+}
+.hamburger-icon {
+  display: none;
+}
+
+/* making the nav bar responsive to small screens */
+@media (max-width: 600px) {
+  .hamburger-icon {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    margin-right: 20px;
+  }
+}
+
+/* the hero section styling */
+
+.hero-section {
+  display: flex;
+  align-items: flex-end;
+}
+
+.column1 {
+  flex: 1;
+}
+.headings {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 20px;
+}
+
+.column2 {
+  flex: 1;
+}
+
+.subject-image img {
+  width: 70%;
+  margin-left: 150px;
+}
+.sub-image-dec {
+  text-align: center;
+  margin-left: 100px;
+}
+.social-icons img {
+  width: 8%;
+  margin-left: 16px;
+}
+
+.column1 .description {
+  margin-bottom: 16px;
+}
+
+/* tech section */
+
+.section-head {
+  margin: 100px 0px;
+  text-align: center;
+  font-size: 35px;
+  color: #505050;
+}
+.description {
+  color: #505050;
+  margin: 0.5em 0;
+}
+.tech-section {
+  display: flex;
+  justify-content: space-between;
+}
+.tech-icons {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 60px;
+}
+.tech-icons img {
+  width: 120px;
+}
+.tech-experience {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.white-btn {
+  margin-top: 20px;
+  width: 160px;
+  font-size: 17px;
+  height: 40px;
+  font-weight: 700;
+  text-align: center;
+  background-color: white;
+  color: #ff8080;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
+  align-self: center;
+}
+
+/* Project section */
+.project-section {
+  display: flex;
+  flex-direction: column;
+}
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project-image img {
+  width: inherit;
+}
+.project-image {
+  display: flex;
+  flex-direction: column;
+  width: 525px;
+  align-items: center;
+}
+.project-section .white-btn {
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+  width: 220px;
+}
+h4 {
+  font-size: 1em;
+  margin: 0.2em 0;
+}
+
+.project-image .red-btn {
+  width: 150px;
+  margin-bottom: 2em;
+  background-color: #fbc1c1;
+}
+
+/* Get in touch section */
+
+.get-in-touch-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2em;
+  background-color: #ffffff;
+  min-width: fit-content;
+}
