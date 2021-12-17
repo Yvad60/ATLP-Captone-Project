@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+a, button{
+  cursor: pointer;
+}
+
 body {
   background-color: #fff2f2;
   color: rgb(37, 37, 37);
@@ -25,11 +29,12 @@ body {
 
 input {
   width: 100%;
-  padding: 0.6em;
-  margin: 10px 0;
+  padding: 0.6em 0;
+  margin: 5px 0 1em 0;
   margin-right: 10px;
   background-color: #fff6f6b7;
-  border-radius: 5px;
+  border-radius: 3px;
+  border-width: thin;
 }
 .form-data h2 {
   margin-bottom: 1.5em;
@@ -49,14 +54,40 @@ input {
   float: right;
 }
 
-#loginForm button {
-  width: fit-content;
-  padding: 5px 20px;
+#signupForm button {
+  width: 100%;
+  padding: 0.6em 0;
   text-align: center;
+  margin: 10px 0;
+  background-color: #ffbfbf;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.2em;
+  border: none;
+}
+
+label{
+  font-weight: 500;
 }
 .sign-up {
   text-align: center;
   color: black;
   font-size: 1em;
   margin-top: 1.5em;
+}
+
+#agreeTerms{
+  width: auto;
+  margin-right: 5px;
+}
+
+.login {
+  text-align: center;
+  color: black;
+  margin-top:10px;
+}
+
+.login a{
+  text-decoration: none;
+  font-weight: bold;
 }

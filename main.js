@@ -41,7 +41,7 @@ function isPasswordValid(password) {
   if (passwordRe.test(password)) {
     passwordValidStatus = true;
   } else {
-    alert("password is not valid")
+    alert("password is not valid\n Password should:\n at least 8 characters long \n contain an uppercase letter, lowercase later and a symbol")
   }
   return passwordValidStatus;
 }

@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+a, button{
+  cursor: pointer;
+}
+
 body {
   background-color: #fff2f2;
   color: rgb(37, 37, 37);
@@ -19,17 +23,18 @@ body {
   background-color: white;
   width: fit-content;
   box-shadow: 0.05em 0.05em 3px rgba(59, 59, 59, 0.26);
-  padding: 30px 50px 30px 30px;
+  padding: 30px;
   display: flex;
 }
 
 input {
   width: 100%;
-  padding: 0.6em;
-  margin: 10px 0;
+  padding: 0.6em 0;
+  margin: 5px 0 1em 0;
   margin-right: 10px;
   background-color: #fff6f6b7;
-  border-radius: 5px;
+  border-radius: 3px;
+  border-width: thin;
 }
 .form-data h2 {
   margin-bottom: 1.5em;
@@ -50,13 +55,30 @@ input {
 }
 
 #loginForm button {
-  width: fit-content;
-  padding: 5px 20px;
+  width: 100%;
+  padding: 0.6em 0;
   text-align: center;
+  margin: 10px 0;
+  background-color: #ffbfbf;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.2em;
+  border: none;
 }
 .sign-up {
   text-align: center;
   color: black;
-  font-size: 1em;
-  margin-top: 1.5em;
+  margin-top:10px;
 }
+
+label{
+  font-weight: 10;
+
+}
+
+.sign-up a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+

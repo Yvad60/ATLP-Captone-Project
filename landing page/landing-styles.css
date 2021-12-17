@@ -198,3 +198,38 @@ h4 {
   background-color: #ffffff;
   min-width: fit-content;
 }
+.card{
+  background-color: white;
+  width: fit-content;
+  box-shadow: 0.05em 0.05em 3px rgba(59, 59, 59, 0.26);
+  padding: 30px;
+  display: flex;
+  margin-left: 300px;
+}
+
+input {
+  width: 100%;
+  padding: 0.6em 0;
+  margin: 5px 0 1em 0;
+  margin-right: 10px;
+  background-color: #fff6f6b7;
+  border-radius: 3px;
+  border-width: thin;
+}
+
+label{
+  font-weight: 10;
+
+}
+
+.card button {
+  width: 100%;
+  padding: 0.3em 0;
+  text-align: center;
+  margin: 10px 0;
+  background-color: #ffbfbf;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.2em;
+  border: none;
+}
