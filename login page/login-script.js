@@ -18,6 +18,7 @@ function authUser(email, password) {
     .then((userCredential) => {
       // if signed in
       let user = userCredential.user;
+      console.log(user);
       alert("logged in successfully :)");
       window.location.href = "../dashboard/dashboard.html";
     })

@@ -2,6 +2,7 @@ function getInputValue(elementId) {
   return document.getElementById(elementId).value;
 }
 
+
 // FORM VALIDATION FUNCTIONS
 // validating form data (email and password)
 function isFormDataValid(name, email) {
@@ -9,10 +10,6 @@ function isFormDataValid(name, email) {
     return true;
   } else { return false }
 }
-
-
-
-
 function isEmailValid(email) {
   let emailValidStatus = false;
   let emailRe = /\S+@\S+\.\S+/;
@@ -54,5 +51,36 @@ function doesPasswordsMatch(password1, password2) {
     return false;
   }
 }
+
+
+
+//Firebase functions TO BE ADDED
+
+// const loggedInUser = firebase.auth().currentUser;
+// if (loggedInUser !== null) {
+//   // The user object has basic properties such as display name, email, etc.
+//   const displayName = loggedInUser.displayName;
+//   const email = loggedInUser.email;
+//   const photoURL = loggedInUser.photoURL;
+//   const emailVerified = loggedInUse.emailVerified;
+
+//   // The user's ID, unique to the Firebase project. Do NOT use
+//   // this value to authenticate with your backend server, if
+//   // you have one. Use User.getToken() instead.
+//   const uid = user.uid;
+// }
+
+
+// firebase.auth().onAuthStateChanged(user => {
+//   if (user) {
+//     console.log("Authenticated")
+//     let userRef = appDatabase.ref("userData/" + user.uid)
+//     userRef.get(snapshot => {
+//       let data = snapshot.val()
+//       document.getElementById("loggedInUserName").innerText(data.userNames)
+//     })
+//   }
+// })
+
 
 
