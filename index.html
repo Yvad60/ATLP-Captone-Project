@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing page</title>
+  <link rel="stylesheet" href="./landing page/landing-styles.css" />
+</head>
+
+<body>
+  <div class="header">
+    <header>
+      <img src="./landing page/assets/Ivad Code logo.svg" alt="" />
+      <nav class="nav=-bar">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="./login page/login.html">Login</a></li>
+          <li><button class="nav-btn red-btn">Contact</button></li>
+        </ul>
+      </nav>
+      <img class="hamburger-icon" src="./landing page/assets/hambeger icon.svg" />
+    </header>
+  </div>
+  <div class="main-content">
+    <div class="hero-section">
+      <div class="column1">
+        <h2 class="headings">
+          Hi there,<br />
+          I create websites worth your value.
+        </h2>
+        <p class="description">
+          I create proffessional websites for personal and proffessional
+          brands. boost your online presence by builiding websites that your
+          costumer will enjoy using.
+        </p>
+        <button class="hero-btn red-btn">Contact</button>
+      </div>
+      <div class="column2">
+        <div class="subject-image">
+          <img src="./landing page/assets/Subject.png" />
+        </div>
+        <div class="sub-image-dec">
+          <h4>Ivad Yves HABIMANA</h4>
+          <h3>Web developer</h3>
+          <div class="social-icons">
+            <img src="./landing page/assets/github icon.png" />
+            <img src="./landing page/assets/linkedin icon.png" />
+            <img src="./landing page/assets/twitter icon.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="section-head">Technologies and expertise</h3>
+    <div class="tech-section">
+      <div class="tech-icons">
+        <img src="./landing page/assets/html icon.svg" />
+        <img src="/landing page/assets/css icon.svg" />
+        <img src="./landing page/assets/JS Icon.svg" />
+      </div>
+      <div class="tech-experience">
+        <h2 class="headings">over 2 years in web development</h2>
+        <p class="description">
+          For the last two years i have been in the field of web development
+          working with different clients and creating websites and products
+          that change peoples lives for the better
+        </p>
+        <button class="white-btn btn">Download CV</button>
+      </div>
+    </div>
+    <h3 class="section-head">Latest projects</h3>
+
+    <div class="project-section">
+      <div class="projects">
+        <div class="project-image">
+          <img src="./landing page/assets/project images/project 1.png" />
+          <h4>Project 1</h4>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+            pulvinar scelerisque scelerisque amet, egestas.
+          </p>
+          <button class="red-btn btn">View project</button>
+        </div>
+        <div class="project-image">
+          <img src="./landing page/assets/project images/project 2.png" />
+          <h4>Project 2</h4>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+            pulvinar scelerisque scelerisque amet, egestas.
+          </p>
+          <button class="red-btn btn">View project</button>
+        </div>
+        <div class="project-image">
+          <img src="./landing page/assets/project images/project 3.png" />
+          <h4>Project 3</h4>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+            pulvinar scelerisque scelerisque amet, egestas.
+          </p>
+          <button class="red-btn btn">View project</button>
+        </div>
+        <div class="project-image">
+          <img src="./landing page/assets/project images/project 4.png" />
+          <h4>Project 4</h4>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+            pulvinar scelerisque scelerisque amet, egestas.
+          </p>
+          <button class="red-btn btn">View project</button>
+        </div>
+      </div>
+      <button class="white-btn btn">checkout more projects</button>
+    </div>
+
+    <h3 class="section-head">Get in touch</h3>
+    <div class="get-in-touch-section">
+      <div class="card">
+        <form id="contactForm">
+          <label> Name</label><br>
+          <input type="text" name="name" id="name" /><br />
+          <label>Email</label><br>
+          <input type="email" name="email" id="email" /><br />
+          <label>message</label><br>
+          <textarea name="name" id="message" placeholder="your message" required></textarea><br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <h3 class="text-logo">IvadCode</h3>
+      </footer>
+    </div>
+  </div>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script defer src="./init-firebase.js"></script>
+  <script defer src="./main.js"></script>
+  <script defer src="./landing page/landing-script.js"></script>
+</body>
+
+</html>
