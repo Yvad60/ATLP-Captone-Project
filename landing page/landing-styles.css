@@ -198,7 +198,7 @@ h4 {
   background-color: #ffffff;
   min-width: fit-content;
 }
-.card{
+.card {
   background-color: white;
   width: fit-content;
   box-shadow: 0.05em 0.05em 3px rgba(59, 59, 59, 0.26);
@@ -217,9 +217,8 @@ input {
   border-width: thin;
 }
 
-label{
+label {
   font-weight: 10;
-
 }
 
 .card button {
