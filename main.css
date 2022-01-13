@@ -1,32 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   /* the app main colors */
   --primary-red: #ff8080;
-  --primary-white: #fdf2f2;
-  font-size: 16px;
+  --primary-light: #fdf2f2;
+  --primary-dark: #505050;
+  --light-red: #ffe4e4;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #fdf2f2;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-light);
 }
 
-.white-btn {
-  margin-top: 20px;
-  width: 160px;
-  font-size: 17px;
-  height: 40px;
-  font-weight: 700;
-  text-align: center;
+header {
+  padding: 1rem 3.5rem;
   background-color: white;
-  color: #ff8080;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  align-items: center;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-inline: 1rem;
+  display: block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+header ul li a:hover {
+  color: var(--primary-red);
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 2.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.3rem;
+  height: 1.6rem;
+}
+
+.toggle-btn .bar {
   border-radius: 10px;
-  border: none;
-  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
-  align-self: center;
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    display: flex;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    width: 100%;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  nav ul li {
+    padding: 0.3rem 0;
+  }
+  .active {
+    display: flex;
+  }
 }

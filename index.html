@@ -7,23 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing page</title>
   <link rel="stylesheet" href="./landing page/landing-styles.css" />
+  <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-  <div class="header">
-    <header>
-      <img src="./landing page/assets/Ivad Code logo.svg" alt="" />
-      <nav class="nav=-bar">
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="./login page/login.html">Login</a></li>
-          <li><button class="nav-btn red-btn">Contact</button></li>
-        </ul>
-      </nav>
-      <img class="hamburger-icon" src="./landing page/assets/hambeger icon.svg" />
-    </header>
-  </div>
+  <header>
+    <div class="logo">
+      <a href="./index.html">
+        <img src="./landing page/assets/Ivad Code logo.svg" alt="the image of logo" />
+      </a>
+    </div>
+    <a href="#" class="toggle-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./blog page/blog.html">Blog</a></li>
+        <li><a href="./login page/login.html">Login</a></li>
+        <li><button class="nav-btn red-btn">Contact</button></li>
+      </ul>
+    </nav>
+  </header>
   <div class="main-content">
     <div class="hero-section">
       <div class="column1">
@@ -139,6 +146,7 @@
   <script defer src="./init-firebase.js"></script>
   <script defer src="./main.js"></script>
   <script defer src="./landing page/landing-script.js"></script>
+  <script defer src="./main.js"></script>
 </body>
 
 </html>

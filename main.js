@@ -2,6 +2,9 @@ function getInputValue(elementId) {
   return document.getElementById(elementId).value;
 }
 
+function getElementByClass(className) {
+  return document.querySelector(`.${className}`);
+}
 
 // FORM VALIDATION FUNCTIONS
 // validating form data (email and password)
@@ -52,7 +55,13 @@ function doesPasswordsMatch(password1, password2) {
   }
 }
 
+// toggle hamberger icon
 
+const navLinks = getElementByClass('nav-links');
+const hambergerIcon = getElementByClass('toggle-btn')
+hambergerIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+})
 
 //Firebase functions TO BE ADDED
 
