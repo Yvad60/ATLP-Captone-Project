@@ -18,106 +18,30 @@
           <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="../login page/login.html">Login</a></li>
-            <li><button class="nav-btn red-btn">Contact</button></li>
+            <li><button class="nav-btn red-btn">+new article</button></li>
           </ul>
         </nav>
       </header>
     </div>
 
     <div class="main">
-      <div class="upper-cards">
-        <div class="card">
-          <img class="card-img" src="./assets/mac.jpg" />
-          <h2 class="card-heading">The laptop of the next generation</h2>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            quam sit volutpat orci sit quam suspendisse a.
-          </p>
-          <a href="#" class="read-link">Read article</a>
-        </div>
-        <div class="card">
-          <img class="card-img" src="assets/keyboard.jpg" />
-          <h2 class="card-heading">Which keyboard should you buy?</h2>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            quam sit volutpat orci sit quam suspendisse a.
-          </p>
-          <a href="#" class="read-link">Read article</a>
-        </div>
-        <div class="card">
-          <h1>navigate</h1>
-        </div>
-      </div>
-      <div class="section-part">
-        <h2 class="section-heading">Popular stories</h2>
-        <div class="stories-slide">
-          <img src="./assets/slide icon.svg" class="slide" alt="" />
-          <div class="card">
-            <div class="image-container">
-              <img src="./assets/windows 11.jpg" alt="windows 11 image" class="card-img card2-img" />
-              <p class="label">Tech</p>
-            </div>
-            <h3>Is the new windows 11 worth upgrading?</h3>
-            <h4>HandsOn experience after a month of use</h4>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img src="./assets/phone.jpg" alt="image of a phone" class="card-img card2-img" />
-              <p class="label">Productivity</p>
-            </div>
-            <h3>The most productive app of 2021</h3>
-            <h4>HandsOn experience after a month of use</h4>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img src="./assets/ps4.jpg" alt="image of a gaming console" class="card-img card2-img" />
-              <p class="label">Gaming</p>
-            </div>
-            <h3>Buy the PS4 while you still can</h3>
-            <h4>HandsOn experience after a month of use</h4>
-          </div>
-          <img src="./assets/slide icon.svg" alt="" class="flipped-right slide" />
-        </div>
-      </div>
       <div class="section-part">
         <h2>Read list</h2>
         <div class="read-list-section">
-          <div class="read-articles">
-            <div class="card3 ">
-              <div class="img-box"><img src="./assets/andela bcup.jpg" alt="andela cup image" class="card-img1"></div>
-              <div class="article-text card">
-                <h3>Why you should join Andela now,
-                  my ATLP Journey in 2021</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Commodo ac odio iaculis neque. Porta at praesent
-                  diam vitae consectetur id eu maecenas. Sagittis
-                  nullam quis et sem augue <span class="read-link">Read more</span></p>
-                <p class="read-link">By Ivad Yves</p>
-              </div>
-            </div>
-            <div class="card3 ">
-              <img src=".//assets/servr.jpg" alt="andela cup image" class="card-img1">
-              <div class="article-text card">
-                <h3>Why you should join Andela now,
-                  my ATLP Journey in 2021</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Commodo ac odio iaculis neque. Porta at praesent
-                  diam vitae consectetur id eu maecenas. Sagittis
-                  nullam quis et sem augue <span class="read-link">Read more</span></p>
-                <p class="read-link">By Ivad Yves</p>
-              </div>
-            </div>
+          <div class="read-articles" id="articles-list">
             <div class="card3">
-              <img src="./assets/web computer.jpg" alt="andela cup image" class="card-img1">
-              <div class="article-text">
-                <h3>Why you should join Andela now,
+              <div class="image-container">
+                <img src="./assets/phone.jpg" class="card-img1">
+                <p class="label">Productivity</p>
+              </div>
+              <div class="article-text card">
+                <h3 class="blog-title">Why you should join Andela now,
                   my ATLP Journey in 2021</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Commodo ac odio iaculis neque. Porta at praesent
                   diam vitae consectetur id eu maecenas. Sagittis
-                  nullam quis et sem augue <span class="read-link">Read more</span></p>
-                <p class="read-link">By Ivad Yves</p>
+                  nullam quis et sem augue <span class="read-link" id="readMore">Read more</span></p>
+                <p class="read-link">by Ivad</p>
               </div>
             </div>
           </div>
@@ -126,6 +50,8 @@
     </div>
   </div>
   </div>
+  </div>
+  <script src="./blog-script.js"></script>
 </body>
 
 </html>
