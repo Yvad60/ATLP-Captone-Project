@@ -28,6 +28,7 @@ it also includes the dashboard which enables the admin to manage everything dire
 - [Mongoose](https://mongoosejs.com)
 - [Firebase](http://firebase.google.com)
 - [Express.js](https://expressjs.com)
+- [trello](https://trello.com)
 - [several other packages](https://www.npmjs.com)
 
 ## Getting Started
