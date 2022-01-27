@@ -1,0 +1,13 @@
+.manage button{
+  margin-top: 20px;
+  width: 160px;
+  font-size: 17px;
+  height: 40px;
+  font-weight: 700;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
+  align-self: center;
+}

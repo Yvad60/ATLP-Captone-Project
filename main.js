@@ -63,33 +63,4 @@ hambergerIcon.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 })
 
-//Firebase functions TO BE ADDED
-
-// const loggedInUser = firebase.auth().currentUser;
-// if (loggedInUser !== null) {
-//   // The user object has basic properties such as display name, email, etc.
-//   const displayName = loggedInUser.displayName;
-//   const email = loggedInUser.email;
-//   const photoURL = loggedInUser.photoURL;
-//   const emailVerified = loggedInUse.emailVerified;
-
-//   // The user's ID, unique to the Firebase project. Do NOT use
-//   // this value to authenticate with your backend server, if
-//   // you have one. Use User.getToken() instead.
-//   const uid = user.uid;
-// }
-
-
-// firebase.auth().onAuthStateChanged(user => {
-//   if (user) {
-//     console.log("Authenticated")
-//     let userRef = appDatabase.ref("userData/" + user.uid)
-//     userRef.get(snapshot => {
-//       let data = snapshot.val()
-//       document.getElementById("loggedInUserName").innerText(data.userNames)
-//     })
-//   }
-// })
-
-
 
