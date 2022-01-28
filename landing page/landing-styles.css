@@ -1,148 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
-* {
-  margin: 0;
-  padding: 0;
+.main-section {
+  padding: 4.5rem 3.5rem 2.5rem 3.5rem;
 }
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdf2f2;
-}
-header {
-  background-color: #fdfcfc;
-  overflow: auto;
-  position: fixed;
-  top: 0%;
-  width: 100%;
-  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
-}
-.main-content {
-  margin: 110px 88px;
-}
-
-.header header {
-  margin: 0 88px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-  align-items: center;
-  overflow: hidden;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.nav-links li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-left: 70px;
-}
-.nav-links a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #505050;
-}
-
-.red-btn {
-  width: 105px;
-  height: 40px;
-  letter-spacing: px;
-  font-size: 17px;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 15px;
-  border: none;
-  color: white;
-  background-color: #ff8080;
-}
-.hamburger-icon {
-  display: none;
-}
-
-/* making the nav bar responsive to small screens */
-@media (max-width: 600px) {
-  .hamburger-icon {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-    margin-right: 20px;
-  }
-}
-
-/* the hero section styling */
-
-.hero-section {
-  display: flex;
-  align-items: flex-end;
-}
-
-.column1 {
-  flex: 1;
-}
-.headings {
-  font-size: 40px;
-  line-height: 45px;
-  margin-bottom: 20px;
-}
-
-.column2 {
-  flex: 1;
-}
-
 .subject-image img {
-  width: 70%;
-  margin-left: 150px;
+  width: 80%;
+  max-width: 25rem;
+  min-width: 200px;
+  margin-top: 2rem;
+}
+
+section{
+  margin-bottom: 1.5rem;
+}
+.headings{
+  line-height: 1.7rem;
+}
+
+.headings,
+.description {
+  padding-bottom: 1rem;
+}
+.subject-image {
+  display: flex;
+  justify-content: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.sub-image-dec img {
+  width: 20%;
+  padding-left: 0.5rem;
 }
 .sub-image-dec {
-  text-align: center;
-  margin-left: 100px;
-}
-.social-icons img {
-  width: 8%;
-  margin-left: 16px;
-}
-
-.column1 .description {
-  margin-bottom: 16px;
-}
-
-/* tech section */
-
-.section-head {
-  margin: 100px 0px;
-  text-align: center;
-  font-size: 35px;
-  color: #505050;
-}
-.description {
-  color: #505050;
-  margin: 0.5em 0;
-}
-.tech-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
-.tech-icons {
-  flex: 1;
+.section-head {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #505050;
+  margin: 4rem 0;
+}
+.tech-icons{
   display: flex;
   justify-content: space-evenly;
-  padding-right: 60px;
 }
-.tech-icons img {
-  width: 120px;
+
+.tech-icons img{
+  max-width: 15%;
+  min-width: 70px;
+  margin-bottom: 2rem;
 }
-.tech-experience {
-  flex: 1;
+
+.tech-experience{
+
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+.projects{
   display: flex;
   flex-direction: column;
 }
+.project-image{
+  margin-bottom: 10%;
+}
+.project-image img{
+  width: 100%;
+}
+.project-section{
+  display: flex;
+  flex-direction: column;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-card1 {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+#form-card2{
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8B8B8B;
+}
+
+#contactForm label{
+  font-size: 1rem;
+  margin-bottom:5rem;
+}
+#contactForm{
+  width: 75%;
+}
+#contactForm input{
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+#contactForm textarea{
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0.4rem;
+}
+#form h4{
+  padding-bottom: 0.4rem;
+}
+
+#form p{
+  padding-bottom: 0.4rem;
+}
+
 .white-btn {
-  margin-top: 20px;
-  width: 160px;
-  font-size: 17px;
-  height: 40px;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
   font-weight: 700;
   text-align: center;
   background-color: white;
@@ -152,32 +135,97 @@ header {
   box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.116);
   align-self: center;
 }
+#form-card1 img{
+  display: none;
+}
 
-/* Project section */
-.project-section {
-  display: flex;
-  flex-direction: column;
+
+
+@media (min-width: 900px) {
+  body{
+  margin:0 auto; 
+  }
+  .main-section {
+  max-width: 1280px;
 }
-.projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  header{
+    max-width: 1280px;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #column1 {
+    padding-right: 2rem;
+  }
+  .subject-image {
+    justify-content: right;
+  }
+  .subject-image img {
+    width: 70%;
+    max-width: none;
+  }
+  .sub-image-dec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10rem;
+  }
+  #column1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .headings {
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .description {
+    font-size: 1.1em;
+    padding-bottom: 1.5rem;
+  }
+  .tech-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7rem;
+  }
+  .tech-icons img{
+  width: 25%;
+  max-width: none;
+  margin-bottom: 2rem;
 }
-.project-image img {
-  width: inherit;
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+  .project-image img{
+    width: 100%;
+  }
+  #form{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  #form-card1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #form-card1 img{
+    padding: 2rem 0 4rem 0;
+  width: 50%;
+  display: block;
 }
-.project-image {
-  display: flex;
-  flex-direction: column;
-  width: 525px;
-  align-items: center;
 }
-.project-section .white-btn {
-  justify-self: center;
-  align-self: center;
-  margin: 0;
-  width: 220px;
-}
+
+
+
+
+/* tech section */
+
+/* 
+
 h4 {
   font-size: 1em;
   margin: 0.2em 0;
@@ -187,11 +235,11 @@ h4 {
   width: 150px;
   margin-bottom: 2em;
   background-color: #fbc1c1;
-}
+} */
 
 /* Get in touch section */
 
-.get-in-touch-section {
+/* .get-in-touch-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 2em;
