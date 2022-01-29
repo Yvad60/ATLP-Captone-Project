@@ -30,6 +30,12 @@ function isNameValid(name) {
   if (nameRe.test(name)) {
     nameValidStatus = true;
   } else {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    })
     alert("name is not valid");
   }
   return nameValidStatus;
