@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+a,
+button {
+  cursor: pointer;
+}
 :root {
   /* the app main colors */
   --primary-red: #ff8080;
@@ -13,6 +17,7 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   background-color: var(--primary-light);
 }

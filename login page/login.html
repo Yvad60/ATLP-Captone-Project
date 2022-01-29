@@ -5,38 +5,53 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/29dd4087dd.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="./login-styles.css" />
+  <link rel="stylesheet" href="../main.css">
 </head>
 
 <body>
+
   <div class="wrapper">
-    <div class="form-illustration">
-      <!-- @TODO add an image here! -->
-    </div>
-    <div class="form-data">
-      <h2>Login to your account</h2>
-      <div class="login-form">
-        <form id="loginForm">
-          <label>Email</label><br />
-          <input type="email" id="email" required /><br />
-          <label>Password</label><br />
-          <input type="password" id="password" required /><br />
-          <a href="#" id="forgotPassword">forgot password?</a> <br />
-          <input type="checkbox" name="" id="rememberLogin" /><span>remember me</span><br />
-          <button type="submit">Login</button><br />
-          <p class="sign-up">
-            Don't have an account?
-            <a href="../signup-page/signup.html">Sign up</a>
-          </p>
-        </form>
+    <img src="../landing page/assets/Ivad Code logo.svg" alt="" class="logo-image">
+    <section id="login">
+      <div class="form-illustration">
+        <img src="./assets/login illustrator.png" alt="illustration for login">
       </div>
-    </div>
+      <div class="form-section">
+        <h2>Login to your account</h2>
+        <div class="login-form">
+          <form id="loginForm">
+            <label>Email</label><br />
+            <input type="email" id="email" required /><br />
+            <label>Password</label><br />
+            <input type="password" id="password" required /><br />
+            <a href="#" id="forgotPassword">forgot password?</a> <br />
+            <input type="checkbox" name="" id="rememberLogin" /><span>remember me</span><br />
+            <button type="submit">Login</button><br />
+            <p class="sign-up">
+              Don't have an account?
+              <a href="../signup-page/signup.html">Sign up</a>
+            </p>
+          </form>
+        </div>
+
+    </section>
+
   </div>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-  <script src="../init-firebase.js"></script>
+  </div>
+  <footer>
+    <h3 class="text-logo"><img src="../landing page/assets/Ivad Code logo.svg" alt="logo"></h3>
+    <p>&copy; IvadCode 2022</p>
+    <div class="icons">
+      <p><i class="fab fa-facebook fa-1x"></i></p>
+      <p><i class="fab fa-twitter fa-1x"></i></p>
+      <p><i class="fab fa-linkedin fa-1x"></i></p>
+    </div>
+  </footer>
   <script src="../main.js"></script>
   <script src="./login-script.js"></script>
 </body>
