@@ -59,6 +59,7 @@ header {
 
 .single-article {
   background-color: white;
+  margin-bottom: 2rem;
 }
 
 .article-text h3 {
@@ -69,7 +70,7 @@ header {
 .read-link,
 .author {
   color: #ff8080;
-  padding: 0.2rem 0 0.5rem 0;
+  padding: 0.2rem 0 0 0;
   text-decoration: none;
   font-weight: 500;
 }
@@ -89,10 +90,10 @@ header {
   color: #f1f1f1;
   border-radius: 0.5rem;
 }
-#edit-btn {
+.edit-btn {
   background-color: rgb(102, 102, 255);
 }
-#delete-btn {
+.delete-btn {
   background-color: rgb(255, 93, 87);
 }
 /* .upper-cards {

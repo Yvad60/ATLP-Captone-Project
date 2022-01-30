@@ -21,7 +21,8 @@ const getArticles = async () => {
   const editBtn = document.querySelectorAll('.delete-btn')
   editBtn.forEach(button => {
     button.addEventListener('click', (e) => {
-      deleteArticle(button)
+      console.log('hello');
+
     })
   })
 }
