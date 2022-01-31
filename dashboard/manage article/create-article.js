@@ -6,11 +6,12 @@ createArticleForm.addEventListener('submit', async (e) => {
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)
   await createArticle(formInputJSON)
-  Swal.fire({
+  await Swal.fire({
     icon: 'success',
     title: 'Created',
     text: 'Your article is created'
-  }, window.location.href = "../dashboard.html")
+  })
+  window.location.href = "../dashboard.html"
 })
 
 const createArticle = async (data) => {

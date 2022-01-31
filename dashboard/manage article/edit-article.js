@@ -35,17 +35,16 @@ editArticle(articleURL)
 
 editArticleForm.addEventListener('submit', async (e) => {
   e.preventDefault()
-  console.log('let submit')
   const formData = new FormData(editArticleForm)
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)
   await sendArticleRequest(formInputJSON)
-  Swal.fire({
+  await Swal.fire({
     icon: 'success',
-    title: 'Created',
+    title: 'updated',
     text: 'Your article is updated'
-  }, window.location.href = "../dashboard.html")
-
+  })
+  window.location.href = "../dashboard.html"
 })
 
 const sendArticleRequest = async (data) => {
