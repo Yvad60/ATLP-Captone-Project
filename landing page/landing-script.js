@@ -5,24 +5,9 @@ contactForm.addEventListener('submit', async (e) => {
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)
   await sendMessage(formInputJSON)
-  Swal.fire({
-    icon: 'success',
-    title: 'Sent!',
-    text: 'Your message is sent'
-  })
+
   contactForm.reset()
 })
-
-
-// if (isFormDataValid(enteredName, enteredEmail)) {
-//   saveMessage(enteredName, enteredEmail, enteredMessage);
-//   alert("Message Sent")
-//   document.getElementById("contactForm").submit();
-// }
-
-
-// //reference messages collection
-// let messagesRef = appDatabase.ref("Messages");
 
 const sendMessage = async (data) => {
   const apiEndpoint = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
@@ -33,6 +18,21 @@ const sendMessage = async (data) => {
     },
     body: data
   })
-  const responseData = response.json()
+  const responseData = await response.json()
   console.log(responseData);
+
+  switch (response.status) {
+    case 500:
+      console.log("Somethingw wnt")
+      Swal.fire({
+        icon: 'error',
+        title: 'Sent!',
+        text: responseData.response.message.error
+      })
+      break;
+
+    default:
+      break;
+  }
+
 }
