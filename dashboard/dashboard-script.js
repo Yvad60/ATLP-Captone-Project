@@ -6,10 +6,12 @@ const displayArticles = async () => {
   const response = await fetch(blogApiURL, {
     method: 'GET'
   })
-  const allArticles = await response.json()
+  const responseData = await response.json()
+  const allArticles = responseData.results
   console.log(allArticles)
   let articleInnerHTML = ``
-  for (let article of allArticles) {
+
+  allArticles.forEach(article => {
     articleInnerHTML += `
     <div class="single-article" id='${article._id}'>
       <img src="./assets/blog-post-3.jpg" class="article-thumbnail">
@@ -25,7 +27,7 @@ const displayArticles = async () => {
       </div>
     </div>
     `
-  }
+  })
   articleDiv.innerHTML = articleInnerHTML
   const deleteButtons = document.querySelectorAll('.delete-btn')
   deleteButtons.forEach(button => {
@@ -37,14 +39,16 @@ const displayArticles = async () => {
         confirmButtonText: 'Delete',
       }).then(async (result) => {
         if (result.isConfirmed) {
-          await deleteArticle(articleId)
-          await Swal.fire('Article Deleted!', '', 'success')
-          location.reload()
+          try {
+            await deleteArticle(articleId)
+            location.reload()
+          } catch (error) {
+            alert('error occured')
+          }
         }
       })
     })
   })
-
   const editButtons = document.querySelectorAll('.edit-btn')
   editButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -59,27 +63,40 @@ const deleteArticle = async (articleId) => {
   const response = await fetch(deleteEndpoint, {
     method: 'DELETE'
   })
+  const responseData = await response.json()
+  if (responseData.status != 200) {
+    return await Swal.fire({
+      icon: 'error',
+      title: 'failed',
+      text: `${responseData.results.error}`
+    })
+  }
+  return await Swal.fire({
+    icon: 'success',
+    title: 'success',
+    text: `article deleted successfully`
+  })
 }
 displayArticles()
 const messagesDiv = document.getElementById('messages')
 const messageApiURL = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
 
-const displayMessages = async () => {
-  const response = await fetch(messageApiURL, {
-    method: 'GET'
-  })
-  const allMessages = await response.json()
-  console.log(allMessages)
-  let messageInnerHTML = ``
-  for (let message of allMessages) {
-    messageInnerHTML += `
-    <div class="single-message">
-      <h4>${message.names}</h4>
-      <h5>email:${message.email}</h5>
-      <p>${message.message}</p>
-    </div>
-    `
-  }
-  messagesDiv.innerHTML = messageInnerHTML
-}
-displayMessages()
+// // const displayMessages = async () => {
+// //   const response = await fetch(messageApiURL, {
+// //     method: 'GET'
+// //   })
+// //   const allMessages = await response.json()
+// //   console.log(allMessages)
+// //   let messageInnerHTML = ``
+// //   for (let message of allMessages) {
+// //     messageInnerHTML += `
+// //     <div class="single-message">
+// //       <h4>${message.names}</h4>
+// //       <h5>email:${message.email}</h5>
+// //       <p>${message.message}</p>
+// //     </div>
+// //     `
+// //   }
+// //   messagesDiv.innerHTML = messageInnerHTML
+// // }
+// displayMessages()

@@ -5,13 +5,12 @@ contactForm.addEventListener('submit', async (e) => {
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)
   await sendMessage(formInputJSON)
-
   contactForm.reset()
 })
 
 const sendMessage = async (data) => {
-  const apiEndpoint = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
-  const response = await fetch(apiEndpoint, {
+  const messagesRoute = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
+  const response = await fetch(messagesRoute, {
     method: 'post',
     headers: {
       'Content-Type': 'application/json'
@@ -19,18 +18,15 @@ const sendMessage = async (data) => {
     body: data
   })
   const responseData = await response.json()
-  console.log(responseData);
-
   switch (response.status) {
     case 500:
-      console.log("Somethingw wnt")
+      console.log("Something went wrong")
       Swal.fire({
         icon: 'error',
         title: 'Sent!',
-        text: responseData.response.message.error
+        text: responseData.results.error
       })
       break;
-
     default:
       break;
   }

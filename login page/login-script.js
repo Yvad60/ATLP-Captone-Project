@@ -13,20 +13,22 @@ loginForm.addEventListener('submit', async (e) => {
     body: formInputJSON
   })
   const responseData = await response.json()
-  console.log(response.status)
   console.log(responseData)
   switch (response.status) {
     case 200:
       await Swal.fire({
         icon: 'success',
         title: 'success',
-        text: `welcome${responseData.results.user.name} Log in successful`
+        text: `welcome ${responseData.results.user.name} Log in successful`
       })
-      if (responseData.results.user.userRole === "admin") {
+
+      if (responseData.results.userRole === "admin") {
+        localStorage.clear()
         localStorage.setItem('token', responseData.results.token)
         window.location.href = "../dashboard/dashboard.html"
       }
-      if (responseData.results.user.userRole === "user") {
+      if (responseData.results.userRole === "user") {
+        normalUserToken = responseData.results.token
         localStorage.setItem('token', responseData.results.token)
         window.location.href = "../blog page/blog.html"
       }
@@ -40,35 +42,3 @@ loginForm.addEventListener('submit', async (e) => {
       break;
   }
 })
-
-
-// document.getElementById("loginForm").addEventListener("submit", loginUser);
-// function loginUser(e) {
-//   e.preventDefault();
-
-//   let enteredEmail = getInputValue("email");
-//   let enteredPassword = getInputValue("password");
-
-//   // authaunticate user
-//   authUser(enteredEmail, enteredPassword);
-// }
-
-// function authUser(email, password) {
-//   // the sign in function
-//   firebase
-//     .auth()
-//     .signInWithEmailAndPassword(email, password)
-//     .then((userCredential) => {
-//       // if signed in
-//       let user = userCredential.user;
-//       console.log(user);
-//       alert("logged in successfully :)");
-//       window.location.href = "../dashboard/dashboard.html";
-//     })
-//     .catch((error) => {
-//       alert("email or password incorrect :(");
-//       let errorCode = error.code;
-//       let errorMessage = error.message;
-//       console.log(errorMessage)
-//     });
-// }
