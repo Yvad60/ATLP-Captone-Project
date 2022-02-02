@@ -97,6 +97,7 @@ const messagesDiv = document.getElementById('messages')
 const messageApiURL = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
 
 const displayMessages = async () => {
+  const adminToken = localStorage.getItem('adminToken')
   const response = await fetch(messageApiURL, {
     method: 'GET',
     headers: {
