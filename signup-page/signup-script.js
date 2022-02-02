@@ -37,7 +37,7 @@ signupForm.addEventListener('submit', async (e) => {
       Swal.fire({
         icon: 'error',
         title: 'failed',
-        text: responseData.results.error
+        text: responseData.results.message
       })
       break
   }

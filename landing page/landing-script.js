@@ -18,17 +18,17 @@ const sendMessage = async (data) => {
     body: data
   })
   const responseData = await response.json()
-  switch (response.status) {
-    case 500:
-      console.log("Something went wrong")
-      Swal.fire({
-        icon: 'error',
-        title: 'Sent!',
-        text: responseData.results.error
-      })
-      break;
-    default:
-      break;
+  if (responseData.status !== 201) {
+    await Swal.fire({
+      icon: 'error',
+      title: 'failed',
+      text: responseData.results.message
+    })
+    return
   }
-
+  Swal.fire({
+    icon: 'success',
+    title: 'Sent!',
+    text: 'your message is sent'
+  })
 }
