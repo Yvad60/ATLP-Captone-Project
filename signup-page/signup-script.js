@@ -17,7 +17,7 @@ signupForm.addEventListener('submit', async (e) => {
   console.log(response.status)
   console.log(responseData)
   switch (response.status) {
-    case 200:
+    case 201:
       await Swal.fire({
         icon: 'success',
         title: 'success',
