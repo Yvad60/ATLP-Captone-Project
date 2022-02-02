@@ -24,11 +24,11 @@ loginForm.addEventListener('submit', async (e) => {
       })
       if (responseData.results.user.userRole === "admin") {
         localStorage.setItem('token', responseData.results.token)
-        window.location.href = "./dashboard/dashboard.html"
+        window.location.href = "../dashboard/dashboard.html"
       }
       if (responseData.results.user.userRole === "user") {
         localStorage.setItem('token', responseData.results.token)
-        window.location.href = "./blog page/blog.html"
+        window.location.href = "../blog page/blog.html"
       }
       break;
     default:

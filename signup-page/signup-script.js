@@ -23,7 +23,7 @@ signupForm.addEventListener('submit', async (e) => {
         title: 'success',
         text: 'account created you will be redirected to login'
       })
-      window.location.href = "./login page/login.html"
+      window.location.href = "../login page/login.html"
       break;
     default:
       Swal.fire({
