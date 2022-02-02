@@ -1,7 +1,7 @@
 const signupEndpoint = 'https://ivad-atlp-staging.herokuapp.com/api/v1/users'
 const signupForm = document.getElementById('signupForm')
 
-signupForm.addEventListener('submit', (e) => {
+signupForm.addEventListener('submit', async (e) => {
   e.preventDefault()
   const formData = new FormData(e.target)
   const formEntries = Object.fromEntries(formData.entries())

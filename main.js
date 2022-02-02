@@ -19,10 +19,10 @@ function isPasswordValid(password) {
 
 const navLinks = document.getElementById('nav-links');
 
-const hambergerIcon = document.getElementById('toggle-btn')
+// const hambergerIcon = document.getElementById('toggle-btn')
 
-hambergerIcon.addEventListener('click', () => {
-  console.log();
-  navLinks.classList.toggle('active')
-})
+// // hambergerIcon.addEventListener('click', () => {
+// //   console.log();
+// //   navLinks.classList.toggle('active')
+// // })
 
