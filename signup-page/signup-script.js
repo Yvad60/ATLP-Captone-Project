@@ -3,6 +3,15 @@ const signupForm = document.getElementById('signupForm')
 
 signupForm.addEventListener('submit', async (e) => {
   e.preventDefault()
+  const password1 = document.getElementById("password").value
+  const passwordConfirm = document.getElementById("passwordConfirm").value
+  if (password1 !== passwordConfirm) {
+    return await Swal.fire({
+      icon: 'error',
+      title: 'Invalid passwords',
+      text: "Passwords does not match try again"
+    })
+  }
   const formData = new FormData(e.target)
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)

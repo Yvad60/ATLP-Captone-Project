@@ -57,12 +57,25 @@ const displayArticles = async () => {
     })
   })
 }
-
 const deleteArticle = async (articleId) => {
+  const adminToken = localStorage.getItem('adminToken')
+  if (!adminToken) {
+    return await Swal.fire({
+      icon: 'error',
+      title: 'failed',
+      text: `you have no access how are you even here?`
+    })
+  }
+  console.log(adminToken);
   const deleteEndpoint = `${blogApiURL}/${articleId}`
+  console.log(deleteEndpoint)
   const response = await fetch(deleteEndpoint, {
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      'admin-login-token': adminToken
+    }
   })
+
   const responseData = await response.json()
   if (responseData.status != 200) {
     return await Swal.fire({
@@ -81,22 +94,25 @@ displayArticles()
 const messagesDiv = document.getElementById('messages')
 const messageApiURL = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
 
-// // const displayMessages = async () => {
-// //   const response = await fetch(messageApiURL, {
-// //     method: 'GET'
-// //   })
-// //   const allMessages = await response.json()
-// //   console.log(allMessages)
-// //   let messageInnerHTML = ``
-// //   for (let message of allMessages) {
-// //     messageInnerHTML += `
-// //     <div class="single-message">
-// //       <h4>${message.names}</h4>
-// //       <h5>email:${message.email}</h5>
-// //       <p>${message.message}</p>
-// //     </div>
-// //     `
-// //   }
-// //   messagesDiv.innerHTML = messageInnerHTML
-// // }
-// displayMessages()
+const displayMessages = async () => {
+  const response = await fetch(messageApiURL, {
+    method: 'GET',
+    headers: {
+      'admin-login-token': adminToken
+    }
+  })
+  const responseData = await response.json()
+  let allMessages = responseData.results
+  let messageInnerHTML = ``
+  allMessages.forEach(message => {
+    messageInnerHTML += `
+    <div class="single-message">
+      <h4>${message.names}</h4>
+      <h5>email:${message.email}</h5>
+      <p>${message.message}</p>
+    </div>
+    `
+  })
+  messagesDiv.innerHTML = messageInnerHTML
+}
+displayMessages()

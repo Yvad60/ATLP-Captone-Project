@@ -21,16 +21,16 @@ loginForm.addEventListener('submit', async (e) => {
         title: 'success',
         text: `welcome ${responseData.results.user.name} Log in successful`
       })
-
       if (responseData.results.userRole === "admin") {
         localStorage.clear()
-        localStorage.setItem('token', responseData.results.token)
+        localStorage.setItem('adminToken', responseData.results.token)
         window.location.href = "../dashboard/dashboard.html"
       }
       if (responseData.results.userRole === "user") {
         normalUserToken = responseData.results.token
-        localStorage.setItem('token', responseData.results.token)
-        window.location.href = "../blog page/blog.html"
+        localStorage.clear()
+        localStorage.setItem('normalUserToken', responseData.results.token)
+        window.location.href = "../private/blog page/blog.html"
       }
       break;
     default:
