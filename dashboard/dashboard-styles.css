@@ -8,6 +8,15 @@
   object-fit: cover;
 }
 
+#articles {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#messages {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .article-thumbnail {
   width: 100%;
   height: 100%;

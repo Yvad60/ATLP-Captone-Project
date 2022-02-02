@@ -8,18 +8,16 @@ const displayArticles = async () => {
   })
   const responseData = await response.json()
   const allArticles = responseData.results
-  console.log(allArticles)
   let articleInnerHTML = ``
-
   allArticles.forEach(article => {
     articleInnerHTML += `
     <div class="single-article" id='${article._id}'>
       <img src="./assets/blog-post-3.jpg" class="article-thumbnail">
       <div class="article-text">
         <h3>${article.title}</h3>
-        <p class="date">${article.createdAt.substring(0, 10)}</p>
+        <p class="date">written at: ${article.createdAt.substring(0, 10)}</p>
         <p>${article.content.substring(0, 150)}...<span class="read-link">Read more</span></p>
-        <p class="author">By ${article.author}</p>
+        <p class="author">Written by ${article.author}</p>
         <div class="manage-btn">
           <button class="edit-btn">edit</button>
           <button class="delete-btn"> delete</button>
@@ -41,7 +39,6 @@ const displayArticles = async () => {
         if (result.isConfirmed) {
           try {
             await deleteArticle(articleId)
-            location.reload()
           } catch (error) {
             alert('error occured')
           }
@@ -57,6 +54,7 @@ const displayArticles = async () => {
     })
   })
 }
+
 const deleteArticle = async (articleId) => {
   const adminToken = localStorage.getItem('adminToken')
   if (!adminToken) {
@@ -76,9 +74,8 @@ const deleteArticle = async (articleId) => {
       'admin-login-token': adminToken
     }
   })
-
   const responseData = await response.json()
-  if (responseData.status != 200) {
+  if (response.status != 200) {
     await Swal.fire({
       icon: 'error',
       title: 'failed',
@@ -86,12 +83,14 @@ const deleteArticle = async (articleId) => {
     })
     return
   }
-  return await Swal.fire({
+  await Swal.fire({
     icon: 'success',
     title: 'success',
     text: `article deleted successfully`
   })
+  location.reload()
 }
+
 displayArticles()
 const messagesDiv = document.getElementById('messages')
 const messageApiURL = 'https://ivad-atlp-staging.herokuapp.com/api/v1/messages'
@@ -105,6 +104,7 @@ const displayMessages = async () => {
     }
   })
   const responseData = await response.json()
+  console.log('messages ', responseData)
   let allMessages = responseData.results
   let messageInnerHTML = ``
   allMessages.forEach(message => {

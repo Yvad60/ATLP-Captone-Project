@@ -4,12 +4,11 @@ const articleURL = `${blogApiURL}/${articleId}`
 const editArticleForm = document.getElementById('edit-article-form')
 
 const editArticle = async (articleURL) => {
-  const token = localStorage.getItem('adminToken')
   const response = await fetch(articleURL, {
     method: 'GET',
   })
-  const article = await response.json()
-  console.log(article)
+  const responseData = await response.json()
+  const article = responseData.results
   const formInnerHtml = `
   <ul>
       <li>
@@ -25,7 +24,7 @@ const editArticle = async (articleURL) => {
         <textarea id="content" name="content">${article.content}</textarea>
       </li>
       <li class="button">
-        <button type="submit" class="red-btn">Create article</button>
+        <button type="submit" class="red-btn">update article</button>
       </li>
     </ul>
   `
@@ -37,28 +36,38 @@ editArticle(articleURL)
 editArticleForm.addEventListener('submit', async (e) => {
   e.preventDefault()
   const formData = new FormData(editArticleForm)
+  for (let input of formData) {
+    if (input[1] === '') {
+      formData.delete(input[0])
+    }
+  }
+  console.log(formData)
+  console.log(typeof (formData));
   const formEntries = Object.fromEntries(formData.entries())
+  console.log(formEntries)
   const formInputJSON = JSON.stringify(formEntries)
+  console.log(formInputJSON)
   await sendArticleRequest(formInputJSON)
 })
 
 const sendArticleRequest = async (data) => {
+  const token = localStorage.getItem('adminToken')
   const response = await fetch(articleURL, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      headers: {
-        'admin-login-token': token
-      }
+      'admin-login-token': token
     },
     body: data
   })
-  const responseData = response.json()
-  if (responseData !== 200) {
+  const responseData = await response.json()
+  console.log(responseData)
+  console.log(response);
+  if (response.status !== 200) {
     await Swal.fire({
       icon: 'error',
-      title: 'updating article failed',
-      text: responseData.results.error
+      title: 'failed!',
+      text: responseData.results.message
     })
     return
   }

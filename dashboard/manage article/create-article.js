@@ -19,11 +19,11 @@ const createArticle = async (data) => {
     body: data
   })
   const responseData = await response.json()
-  if (responseData.status !== 201) {
+  if (response.status != 201) {
     await Swal.fire({
       icon: 'error',
-      title: 'article creation failed',
-      text: responseData.results.error
+      title: 'failed!',
+      text: responseData.results.message
     })
     return
   }

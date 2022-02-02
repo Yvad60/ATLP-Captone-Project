@@ -26,7 +26,7 @@ loginForm.addEventListener('submit', async (e) => {
         localStorage.setItem('adminToken', responseData.results.token)
         window.location.href = "../dashboard/dashboard.html"
       }
-      if (responseData.results.userRole === "user") {
+      else if (responseData.results.userRole === "user") {
         normalUserToken = responseData.results.token
         localStorage.clear()
         localStorage.setItem('normalUserToken', responseData.results.token)

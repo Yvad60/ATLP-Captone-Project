@@ -5,7 +5,6 @@ contactForm.addEventListener('submit', async (e) => {
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)
   await sendMessage(formInputJSON)
-  contactForm.reset()
 })
 
 const sendMessage = async (data) => {
@@ -18,7 +17,7 @@ const sendMessage = async (data) => {
     body: data
   })
   const responseData = await response.json()
-  if (responseData.status !== 201) {
+  if (response.status !== 201) {
     await Swal.fire({
       icon: 'error',
       title: 'failed',
@@ -31,4 +30,5 @@ const sendMessage = async (data) => {
     title: 'Sent!',
     text: 'your message is sent'
   })
+  contactForm.reset()
 }
