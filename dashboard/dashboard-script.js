@@ -60,11 +60,12 @@ const displayArticles = async () => {
 const deleteArticle = async (articleId) => {
   const adminToken = localStorage.getItem('adminToken')
   if (!adminToken) {
-    return await Swal.fire({
+    await Swal.fire({
       icon: 'error',
       title: 'failed',
       text: `you have no access how are you even here?`
     })
+    return
   }
   console.log(adminToken);
   const deleteEndpoint = `${blogApiURL}/${articleId}`
@@ -78,11 +79,12 @@ const deleteArticle = async (articleId) => {
 
   const responseData = await response.json()
   if (responseData.status != 200) {
-    return await Swal.fire({
+    await Swal.fire({
       icon: 'error',
       title: 'failed',
       text: `${responseData.results.error}`
     })
+    return
   }
   return await Swal.fire({
     icon: 'success',

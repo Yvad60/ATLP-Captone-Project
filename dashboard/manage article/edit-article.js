@@ -4,8 +4,9 @@ const articleURL = `${blogApiURL}/${articleId}`
 const editArticleForm = document.getElementById('edit-article-form')
 
 const editArticle = async (articleURL) => {
+  const token = localStorage.getItem('adminToken')
   const response = await fetch(articleURL, {
-    method: 'GET'
+    method: 'GET',
   })
   const article = await response.json()
   console.log(article)
@@ -39,20 +40,32 @@ editArticleForm.addEventListener('submit', async (e) => {
   const formEntries = Object.fromEntries(formData.entries())
   const formInputJSON = JSON.stringify(formEntries)
   await sendArticleRequest(formInputJSON)
-  await Swal.fire({
-    icon: 'success',
-    title: 'updated',
-    text: 'Your article is updated'
-  })
-  window.location.href = "../dashboard.html"
 })
 
 const sendArticleRequest = async (data) => {
   const response = await fetch(articleURL, {
     method: 'PUT',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      headers: {
+        'admin-login-token': token
+      }
     },
     body: data
   })
+  const responseData = response.json()
+  if (responseData !== 200) {
+    await Swal.fire({
+      icon: 'error',
+      title: 'updating article failed',
+      text: responseData.results.error
+    })
+    return
+  }
+  await Swal.fire({
+    icon: 'success',
+    title: 'updated',
+    text: 'Your article is updated'
+  })
+  window.location.href = "../dashboard.html"
 }
